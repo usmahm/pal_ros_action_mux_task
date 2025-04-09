@@ -3,10 +3,12 @@
 This repository demonstrates two ROS 2 tasks as part of PAL Robotics GSoC qualification task:
 
 1. **Task A: Delay Action with Subscription-Driven Requests**
-   - Implements an action-like behavior using a service, with a 5-second delay and dynamic cancellation of previous goals when new requests arrive.
+
+   Implements an action-like behavior using a service, with a 5-second delay and dynamic cancellation of previous goals when new requests arrive.
 
 2. **Task B: Generic Subscriber for Any Message Type**
-   - Dynamically subscribes to any ROS 2 topic, identifies the message type, and logs the received messages.
+
+   Dynamically subscribes to any ROS 2 topic, identifies the message type, and logs the received messages.
 
 ## Table of Contents
 - [Overview](#overview)
