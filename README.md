@@ -3,11 +3,11 @@
 This repository demonstrates two ROS 2 tasks as part of PAL Robotics GSoC qualification task:
 
 1. **Task A: Delay Action with Subscription-Driven Requests**
-
+![2-1](https://github.com/user-attachments/assets/8ee4cd42-8cb5-4544-9f9a-ee2ae685c6ec)
    Implements an action-like behavior using a service, with a 5-second delay and dynamic cancellation of previous goals when new requests arrive.
 
 2. **Task B: Generic Subscriber for Any Message Type**
-
+![2-2](https://github.com/user-attachments/assets/bca0c320-f872-4854-bc3b-11fcd2b8379a)
    Dynamically subscribes to any ROS 2 topic, identifies the message type, and logs the received messages.
 
 ## Table of Contents
@@ -62,6 +62,9 @@ Both tasks are implemented in **C++** (using `rclcpp`) and **Python** (using `rc
 ## Task A: Delay Action with Subscription-Driven Requests
 
 ### How It Works (for Task A)
+
+![action-mux-1 drawio](https://github.com/user-attachments/assets/91e0dd9c-ae5e-418e-a5cb-9f1e4a3d9bd8)
+
 - **Action Server**:
   - Implements a service named `action` (defined in `action_interfaces/srv/String.srv`).
   - Waits for requests and starts a 5-second timer to simulate action execution.
@@ -105,6 +108,9 @@ Both tasks are implemented in **C++** (using `rclcpp`) and **Python** (using `rc
 ## Task B: Generic Subscriber for Any Message Type
 
 ### How It Works (for Task B)
+
+![action-mux-2 drawio](https://github.com/user-attachments/assets/98410e20-007b-47df-be94-9a2d16ecde49)
+
 - **Generic Subscriber**:
   - Periodically checks `get_topic_names_and_types()` to discover message types on the `/buffer` topic.
   - Subscribes to the discovered type and logs the message type and content.
